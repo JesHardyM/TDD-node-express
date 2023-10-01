@@ -5,11 +5,6 @@ import db from "../database/db.js";
 
 describe ("Test CRUD books", () => {
     describe("GET /books", () => {
-        /*beforeEach(async()=>{
-            let response;
-            response = await request(app).get('/books').send();
-        }) */
-        
         test('should return a response with status 200 and type json', async() => {
             const response = await request(app).get('/books').send();
 				expect(response.status).toBe(200);
@@ -75,7 +70,7 @@ describe ("Test CRUD books", () => {
         })
     });
 
-//DELETE
+//DELETE -THE D IN CRUD
 
     describe('DELETE /books', () =>{
         let createdBook = {};
